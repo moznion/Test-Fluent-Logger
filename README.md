@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/moznion/p5-Test-Fluent-Logger.svg?branch=master)](https://travis-ci.org/moznion/p5-Test-Fluent-Logger)
 # NAME
 
 Test::Fluent::Logger - A mock implementation of Fluent::Logger for testing
