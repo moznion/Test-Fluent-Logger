@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "A mock implementation of Fluent::Logger for testing",
    "author" : [
       "moznion <moznion@gmail.com>"
    ],
@@ -54,6 +54,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/moznion/p5-Test-Fluent-Logger/issues"
+      },
+      "homepage" : "https://github.com/moznion/p5-Test-Fluent-Logger",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/moznion/p5-Test-Fluent-Logger.git",
+         "web" : "https://github.com/moznion/p5-Test-Fluent-Logger"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:MOZNION"
 }
