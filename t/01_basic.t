@@ -72,7 +72,7 @@ subtest 'activate and deactivate' => sub {
     is Test::Fluent::Logger::is_active, 1;
 
     $logger->post("tag1", {foo => 'bar'}); # use original _post
-    my @fluent_logs = Test::Fluent::Logger::get_fluent_logs;
+    @fluent_logs = Test::Fluent::Logger::get_fluent_logs;
     is scalar @fluent_logs, 1;
 };
 
