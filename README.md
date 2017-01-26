@@ -80,6 +80,10 @@ Activate intercepting the log payload.
 
 Deactivate intercepting the log payload.
 
+# SEE ALSO
+
+- [Fluent::Logger](https://metacpan.org/pod/Fluent::Logger)
+
 # LICENSE
 
 Copyright (C) moznion.

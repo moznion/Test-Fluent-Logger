@@ -141,6 +141,14 @@ Activate intercepting the log payload.
 
 Deactivate intercepting the log payload.
 
+=head1 SEE ALSO
+
+=over 4
+
+=item L<Fluent::Logger>
+
+=back
+
 =head1 LICENSE
 
 Copyright (C) moznion.
