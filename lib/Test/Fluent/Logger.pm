@@ -3,20 +3,28 @@ use 5.008001;
 use strict;
 use warnings;
 no warnings qw/redefine/;
-use Fluent::Logger;
 
 our $VERSION = "0.01";
+
+require Exporter;
+our @ISA = qw/Exporter/;
+our @EXPORT = qw/get_fluent_logs clear_fluent_logs/;
+our @EXPORT_OK = qw/is_active activate deactivate/;
+
+use Fluent::Logger;
 
 my $original__post = Fluent::Logger->can('_post');
 
 my $is_active;
 my @fluent_logs;
 
-sub is_active {
+sub is_active () {
     return $is_active;
 }
 
 sub import {
+    Test::Fluent::Logger->export_to_level(1, @_);
+
     activate();
 
     *Fluent::Logger::_post = sub {
@@ -37,19 +45,19 @@ sub unimport {
     deactivate();
 }
 
-sub activate {
+sub activate () {
     $is_active = 1;
 }
 
-sub deactivate {
+sub deactivate () {
     $is_active = 0;
 }
 
-sub clear_fluent_logs {
+sub clear_fluent_logs () {
     @fluent_logs = ();
 }
 
-sub get_fluent_logs {
+sub get_fluent_logs () {
     return @fluent_logs;
 }
 
