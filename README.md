@@ -21,7 +21,7 @@ Test::Fluent::Logger - A mock implementation of Fluent::Logger for testing
     $logger->post("tag2", {buz => 'qux'}); # ↑Either
 
     # Get internal stack (array)
-    my @fluent_logs = Test::Fluent::Logger::get_fluent_logs;
+    my @fluent_logs = get_fluent_logs;
     is_deeply \@fluent_logs, [
         {
             'tag_prefix' => 'prefix',
@@ -40,9 +40,9 @@ Test::Fluent::Logger - A mock implementation of Fluent::Logger for testing
     ];
 
     # Clear internal stack (array)
-    Test::Fluent::Logger::clear_fluent_logs;
+    clear_fluent_logs;
 
-    @fluent_logs = Test::Fluent::Logger::get_fluent_logs;
+    @fluent_logs = get_fluent_logs;
     is_deeply \@fluent_logs, [];
 
 # DESCRIPTION
